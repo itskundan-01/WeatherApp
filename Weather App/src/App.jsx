@@ -15,7 +15,7 @@ export default function App() {
     }
     try {
       const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
-      const url = `http://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
+      const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}`;
       const response = await axios.get(url);
       setWeather(response.data);
       setError(null);
